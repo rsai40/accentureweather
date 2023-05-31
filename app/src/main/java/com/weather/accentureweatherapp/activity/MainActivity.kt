@@ -56,9 +56,14 @@ class MainActivity : AppCompatActivity() {
                 Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
         ) {
-            ActivityCompat.requestPermissions(this@MainActivity,
-                 arrayOf(Manifest.permission.ACCESS_COARSE_LOCATION,Manifest.permission.ACCESS_FINE_LOCATION), 1432);
-        }else{
+            ActivityCompat.requestPermissions(
+                this@MainActivity,
+                arrayOf(
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                ), 1432
+            );
+        } else {
             getLocation()
         }
 
@@ -138,8 +143,8 @@ class MainActivity : AppCompatActivity() {
                 latitude = currentLocation!!.latitude
                 longitude = currentLocation!!.longitude
 
-                editor.putString("latitude",latitude.toString())
-                editor.putString("longitude",longitude.toString())
+                editor.putString("latitude", latitude.toString())
+                editor.putString("longitude", longitude.toString())
                 editor.apply()
                 // use latitude and longitude as per your need
             } else {
@@ -151,13 +156,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         weatherViewmodel = ViewModelProvider(this)[WeatherViewmodel::class.java]
+        var list = weatherViewmodel.observeWeatherLiveData()
 
         mainBinding.goWeatherBtn.setOnClickListener {
             if (city.equals("")) {
                 city = mainBinding.citySearch.text.toString().trim()
             }
 
-            city= mainBinding.citySearch.text.toString().trim()
+            city = mainBinding.citySearch.text.toString().trim()
             editor.putString("City", city)
             editor.apply()
             CoroutineScope(Dispatchers.IO).launch {
