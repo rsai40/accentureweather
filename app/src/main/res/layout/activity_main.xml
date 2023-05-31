@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/city_name"
+        android:padding="@dimen/s10dp"
+        android:textSize="@dimen/s14sp"
+        android:layout_margin="@dimen/s10dp"
+        android:textColor="@color/black"
+        android:background="@drawable/edit_text_bg"
+        android:id="@+id/city_search"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.75"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/go_weather_btn"
+        android:layout_marginTop="@dimen/s10dp"
+        android:text="@string/get"
+        android:padding="@dimen/s10dp"
+        android:textColor="@color/white"
+        android:background="@color/purple_500"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_search"
+        android:text="@string/temp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_margin="@dimen/s10dp"
+        android:textSize="@dimen/s14sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp_text"
+        android:text="@string/temp"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/s10dp"
+        android:textSize="@dimen/s12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressure_text"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/temp"
+        android:text="@string/pressure"
+        android:textColor="@color/purple_500"
+        android:layout_margin="@dimen/s10dp"
+        android:textSize="@dimen/s14sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pressure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pressure_text"
+        android:text="@string/pressure"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/s10dp"
+        android:textSize="@dimen/s12sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidity_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pressure"
+        android:text="@string/humidity"
+        android:textStyle="bold"
+        android:textColor="@color/purple_500"
+        android:layout_margin="@dimen/s10dp"
+        android:textSize="@dimen/s14sp"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/humidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/humidity_text"
+        android:text="@string/humidity"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/s10dp"
+        android:textSize="@dimen/s12sp"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@id/humidity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="@dimen/s10dp"
+        android:id="@+id/weather_icon"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
