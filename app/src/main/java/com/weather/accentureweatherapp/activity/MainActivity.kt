@@ -1,4 +1,4 @@
-package com.health.accentureweatherapp.activity
+package com.weather.accentureweatherapp.activity
 
 import android.Manifest
 import android.content.Context
@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
-import com.health.accentureweatherapp.databinding.ActivityMainBinding
-import com.health.accentureweatherapp.network.ApiService
-import com.health.accentureweatherapp.viewmodel.WeatherViewmodel
+import com.weather.accentureweatherapp.databinding.ActivityMainBinding
+import com.weather.accentureweatherapp.network.ApiService
+import com.weather.accentureweatherapp.viewmodel.WeatherViewmodel
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -157,6 +157,7 @@ class MainActivity : AppCompatActivity() {
                 city = mainBinding.citySearch.text.toString().trim()
             }
 
+            city= mainBinding.citySearch.text.toString().trim()
             editor.putString("City", city)
             editor.apply()
             CoroutineScope(Dispatchers.IO).launch {

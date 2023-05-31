@@ -1,4 +1,4 @@
-package com.health.accentureweatherapp.model
+package com.weather.accentureweatherapp.model
 
 import com.google.gson.annotations.SerializedName
 

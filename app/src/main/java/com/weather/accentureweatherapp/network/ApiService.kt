@@ -1,7 +1,6 @@
-package com.health.accentureweatherapp.network
+package com.weather.accentureweatherapp.network
 
-import com.health.accentureweatherapp.model.WeatherModel
-import retrofit2.Call
+import com.weather.accentureweatherapp.model.WeatherModel
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

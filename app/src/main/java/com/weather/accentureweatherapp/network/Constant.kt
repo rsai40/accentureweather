@@ -1,4 +1,4 @@
-package com.health.accentureweatherapp.network
+package com.weather.accentureweatherapp.network
 
 object Constant {
 

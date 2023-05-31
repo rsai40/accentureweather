@@ -1,4 +1,4 @@
-package com.health.accentureweatherapp
+package com.weather.accentureweatherapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

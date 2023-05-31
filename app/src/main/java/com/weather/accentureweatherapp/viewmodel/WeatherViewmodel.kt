@@ -1,9 +1,9 @@
-package com.health.accentureweatherapp.viewmodel
+package com.weather.accentureweatherapp.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.health.accentureweatherapp.model.WeatherInModel
+import com.weather.accentureweatherapp.model.WeatherInModel
 
 class WeatherViewmodel : ViewModel() {
 

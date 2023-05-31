@@ -1,4 +1,4 @@
-package com.health.accentureweatherapp.network
+package com.weather.accentureweatherapp.network
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

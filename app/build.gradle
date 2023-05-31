@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.health.accentureweatherapp'
+    namespace 'com.weather.accentureweatherapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.health.accentureweatherapp"
+        applicationId "com.weather.accentureweatherapp"
         minSdk 24
         targetSdk 33
         versionCode 1

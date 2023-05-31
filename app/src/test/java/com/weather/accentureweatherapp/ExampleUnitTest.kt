@@ -1,4 +1,4 @@
-package com.health.accentureweatherapp
+package com.weather.accentureweatherapp
 
 import org.junit.Test
 

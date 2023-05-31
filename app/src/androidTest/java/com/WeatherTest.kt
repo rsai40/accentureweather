@@ -1,13 +1,5 @@
 package com
 
-import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.health.accentureweatherapp.R
-import com.health.accentureweatherapp.activity.MainActivity
-import org.junit.Rule
-import org.junit.Test
-import org.junit.runner.RunWith
-import java.util.regex.Pattern.matches
-
 class WeatherTest {
 
    /* @RunWith(AndroidJUnit4::class)
